@@ -1,18 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {View, I18nManager} from 'react-native';
+import AppHeader from './src/components/Header';
 
 export default class App extends Component {
   render() {
+    I18nManager.forceRTL(true);
     return (
-      <View></View>
+      <View>
+        <AppHeader title="iPhone 7 128GB"/>
+      </View>
     );
   }
 }
