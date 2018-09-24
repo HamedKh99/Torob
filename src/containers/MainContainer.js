@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import AppHeader from '../components/Header';
 import ProductImagesList from './ProductImagesList';
 import ActionSection from '../components/ActionSection';
+import TabBox from './TabBox';
 
 class MainContainer extends Component {
     constructor(props){
@@ -11,10 +12,11 @@ class MainContainer extends Component {
 
     render() {
         return(
-            <View style={{backgroundColor:'white'}}>
+            <View style={{flex:1, backgroundColor:'white'}}>
                 <AppHeader title="iPhone 7 128GB"/>
                 <ProductImagesList/>
                 <ActionSection name="iPhone 7 128GB"/>
+                <TabBox/>
             </View>
         )
     }
