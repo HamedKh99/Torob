@@ -10,7 +10,7 @@ const AppHeader = (props) => {
                 <Text style={{color: 'white'}}>{props.title}</Text>
             </Left>
             <Body style={{flex:1, alignItems:'center'}}>
-
+  
             </Body>
             <Right style={{flex:1}}>
             </Right>
