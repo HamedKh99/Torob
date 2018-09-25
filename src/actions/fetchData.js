@@ -10,9 +10,10 @@ function fetchDataReqSent() {
     })
 }
 
-function fetchDataReqSuccess() {
+function fetchDataReqSuccess(images) {
     return({
-        type : FETCHDATA_REQ_SUCCESS
+        type : FETCHDATA_REQ_SUCCESS,
+        images
     })
 }
 
@@ -27,8 +28,7 @@ export function requestFetchData() {
         dispatch(fetchDataReqSent());
         await fetchDataRequest()
         .then(function(response){
-            console.warn(response.data);
-            dispatch(fetchDataReqSuccess());
+            dispatch(fetchDataReqSuccess(response.data.image_urls[0].urls));
         }).catch(function(error){
             dispatch(fetchDataReqErr());
         })
