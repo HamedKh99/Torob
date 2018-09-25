@@ -21,7 +21,7 @@ class MainContainer extends Component {
         } else if(this.props.success) {
             toReturn = <View style={{flex:1, backgroundColor:'white'}}>
                             <AppHeader title="iPhone 7 128GB"/>
-                            <ProductImagesList/>
+                            <ProductImagesList images={this.props.images}/>
                             <ActionSection name="iPhone 7 128GB"/>
                             <TabBox/>
                         </View>

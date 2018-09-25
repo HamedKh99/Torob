@@ -8,19 +8,13 @@ class ProductImagesList extends Component {
     }
 
     render() {
-        this.data = [{photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"},
-                    {photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"},
-                    {photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"},
-                    {photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"},
-                    {photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"},
-                    {photo_url : "https://file.digi-kala.com/digikala/Image/Webstore/ProductPhoto/P_222906/Original/9508e5.jpg"}]
         return(
             <View>
                 <FlatList
                 style = {{marginTop : 10}}
-                data = {this.data}
+                data = {this.props.images}
                 horizontal = {true}
-                renderItem = {({item}) => <ProductImage photo_url={item.photo_url}/>}
+                renderItem = {({item}) => <ProductImage photo_url={item}/>}
                 showsHorizontalScrollIndicator = {false}/>
             </View>
             
