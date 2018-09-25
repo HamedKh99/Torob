@@ -6,11 +6,11 @@ import sizes from '../config/sizes';
 
 const FirstRoute = () => (
     <View style={{flex:1 ,backgroundColor:'red'}}/>
-  );
-  const SecondRoute = () => (
+);
+const SecondRoute = () => (
     <View style={{flex:1, backgroundColor:'blue'}}/>
-  );
-  
+);
+
 
 class TabBox extends Component {
     constructor(props) {
