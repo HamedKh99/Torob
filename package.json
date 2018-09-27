@@ -11,6 +11,7 @@
     "native-base": "^2.8.0",
     "react": "16.5.0",
     "react-native": "0.57.1",
+    "react-native-image-pan-zoom": "^2.1.10",
     "react-native-tab-view": "^1.0.2",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
