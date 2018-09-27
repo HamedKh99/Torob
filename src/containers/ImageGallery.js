@@ -9,7 +9,7 @@ class ImageGallery extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            imageNum : 0,
+            imageNum : this.props.chosenIndex,
         };
     }
 

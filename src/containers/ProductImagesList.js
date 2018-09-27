@@ -14,7 +14,7 @@ class ProductImagesList extends Component {
                 style = {{marginTop : 10}}
                 data = {this.props.images}
                 horizontal = {true}
-                renderItem = {({item}) => <ProductImage setModalVisible={this.props.setModalVisible} photo_url={item}/>}
+                renderItem = {({item}) => <ProductImage id={this.props.images.indexOf(item)} setChosenIndex={this.props.setChosenIndex} setModalVisible={this.props.setModalVisible} photo_url={item}/>}
                 showsHorizontalScrollIndicator = {false}/>
             </View>
             

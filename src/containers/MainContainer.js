@@ -1,6 +1,5 @@
 import React , {Component} from 'react';
-import {View, Text, Modal, TouchableHighlight} from 'react-native';
-import {Icon} from 'native-base';
+import {View, Text, Modal} from 'react-native';
 import AppHeader from '../components/Header';
 import ProductImagesList from './ProductImagesList';
 import ActionSection from '../components/ActionSection';
@@ -13,12 +12,16 @@ import ImageGallery from './ImageGallery';
 class MainContainer extends Component {
     constructor(props){
         super(props);
-        this.state = {modalVisible:false};
+        this.state = {modalVisible:false, chosenIndex:0};
         this.props.requestFetchData();
     }
 
     setModalVisible = (visible) => {
         this.setState({modalVisible : visible});
+    }
+
+    setChosenIndex = (index) => {
+        this.setState({chosenIndex : index});
     }
 
     render() {
@@ -33,10 +36,10 @@ class MainContainer extends Component {
                     transparent = {false}
                     visible = {this.state.modalVisible}
                 >
-                    <ImageGallery setModalVisible={this.setModalVisible} images={this.props.images}/>
+                    <ImageGallery chosenIndex={this.state.chosenIndex} setModalVisible={this.setModalVisible} images={this.props.images}/>
                 </Modal>
                 <AppHeader title="iPhone 7 128GB"/>
-                <ProductImagesList images={this.props.images} setModalVisible={this.setModalVisible}/>
+                <ProductImagesList images={this.props.images} setModalVisible={this.setModalVisible} setChosenIndex={this.setChosenIndex}/>
                 <ActionSection name="iPhone 7 128GB"/>
                 <TabBox/>
             </View>
