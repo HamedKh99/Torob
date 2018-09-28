@@ -47,6 +47,7 @@ class ImageGallery extends Component {
                             onDragLeft={this.changeImage}
                             horizontalOuterRangeOffset={(offsetX) => {this.changeImage(offsetX)}}>
                         <Image style={{width:200, height:120}}
+                            resizeMode='contain'
                             source={{uri:this.props.images[this.state.imageNum]}}/>               
                     </ImageZoom>
                 </View>
