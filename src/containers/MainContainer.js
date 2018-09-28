@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import {View, Text, Modal} from 'react-native';
 import AppHeader from '../components/Header';
 import ProductImagesList from './ProductImagesList';
-import ActionSection from '../components/ActionSection';
+import ActionSection from './ActionSection';
 import TabBox from './TabBox';
 import {connect} from 'react-redux';
 import {requestFetchData} from '../actions/fetchData'
